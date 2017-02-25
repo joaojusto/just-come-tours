@@ -1,8 +1,14 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# Just Come Tours
+Just Come Tours landing page
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+## Install
+`yarn`
 
 ## Running in development
-`gatsby develop`
+`yarn run develop`
+
+## Building
+`yarn run build`
+
+## Deploying
+`yarn run deploy`
