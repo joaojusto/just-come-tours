@@ -16,3 +16,14 @@
   width: 100%;
   height: 100%;
 }
+
+.Layout-footer {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: $Spacing-large $Spacing-xSmall;
+
+  background-color: $Color-charcoal;
+}

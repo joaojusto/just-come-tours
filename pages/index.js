@@ -4,6 +4,9 @@ import '../css/Index';
 import Hero from '../components/Hero';
 import Event from '../components/Event';
 import TourismPrograms from '../components/TourismPrograms';
+import CorporateTeamBuilding from '../components/CorporateTeamBuilding';
+import GuidedThematicTours from '../components/GuidedThematicTours';
+import AdventuresExperiences from '../components/AdventuresExperiences';
 
 const Index = () => (
   <div className="Index">
@@ -11,7 +14,12 @@ const Index = () => (
     <Event />
     <span className="Index-sectionSpacer" />
     <TourismPrograms />
-  </div>
+    <span className="Index-sectionSpacer" />
+    <CorporateTeamBuilding />
+    <span className="Index-sectionSpacer" />
+    <GuidedThematicTours />
+    <span className="Index-sectionSpacer" />
+    <AdventuresExperiences /> </div>
 );
 
 export default Index;

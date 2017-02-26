@@ -22,6 +22,10 @@ const Template = ({ location, children }) => {
       {header}
       {children}
     </div>
+
+    <footer className="Layout-footer">
+      
+    </footer>
   </div>;
 };
 

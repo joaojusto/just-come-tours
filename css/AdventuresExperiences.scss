@@ -1,0 +1,71 @@
+@import "Color";
+@import "Spacing";
+
+.AdventuresExperiences {
+  position: relative;
+
+  background:
+    linear-gradient(to top, $Color-pale-grey-15, $Color-pale-grey),
+    url(../images/footer.png)
+  ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.AdventuresExperiences-header {
+  padding: 0 $Spacing-xSmall;
+}
+
+.AdventuresExperiences-list {
+  margin-top: $Spacing-small;
+
+  overflow: hidden;
+}
+
+.AdventuresExperiences-actions {
+  display: flex;
+  justify-content: center;
+
+  padding-top: $Spacing-small;
+  padding-bottom: $Spacing-large;
+}
+
+.AdventuresExperiences-item {
+  position: relative;
+
+  padding: 0 $Spacing-xSmall / 2;
+}
+
+.AdventuresExperiences-itemImage {
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.AdventuresExperiences-itemLabel {
+  position: absolute;
+
+  bottom: $Spacing-small;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - #{$Spacing-xSmall});
+  text-align: center;
+
+  z-index: 3;
+}
+
+.AdventuresExperiences-itemOverlay {
+  position: absolute;
+
+  top: 50%;
+  left: $Spacing-xSmall / 2;
+
+  width: calc(100% - #{$Spacing-xSmall});
+  height: 50%;
+
+  background-image: linear-gradient(to bottom, $Color-charcoal-0, $Color-charcoal);
+
+  z-index: 2;
+}
