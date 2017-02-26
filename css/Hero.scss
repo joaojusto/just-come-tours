@@ -1,0 +1,56 @@
+@import "Color";
+@import "Spacing";
+
+$Hero-z-index-background: 1;
+$Hero-z-index-backgroundOverlay: 2;
+$Hero-z-index-foreground: 3;
+
+.Hero {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.Hero-background {
+  z-index: $Hero-z-index-background;
+}
+
+.Hero-darkOverlay,
+.Hero-lightOverlay {
+  position: absolute;
+
+  left: 0;
+  z-index: $Hero-z-index-backgroundOverlay;
+  width: 100%;
+  height: 100%;
+}
+
+.Hero-darkOverlay {
+  top: 0;
+
+  background-image: linear-gradient(to bottom, $Color-black-60, $Color-black-20);
+}
+
+.Hero-lightOverlay {
+  top: 50%;
+
+  background-image: linear-gradient(to bottom, $Color-pale-grey-0, $Color-pale-grey);
+}
+
+.Hero-content {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+
+  padding: 0 $Spacing-xSmall;
+
+  z-index: $Hero-z-index-foreground;
+}
+
+.Hero-actions {
+  margin-top: $Spacing-small;
+}

@@ -1,0 +1,16 @@
+@import "Color";
+
+$Label-font-size: 13px;
+$Label-line-height: 30px;
+$Label-letter-spacing: 1px;
+$Label-font-family: 'Roboto Slab', serif;
+
+.Label {
+  color: $Color-pale-grey;
+
+  font-size: $Label-font-size;
+  line-height: $Label-line-height;
+  letter-spacing: $Label-letter-spacing;
+  font-family: $Label-font-family;
+  text-transform: uppercase;
+}

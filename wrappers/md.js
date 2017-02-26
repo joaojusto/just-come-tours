@@ -1,10 +1,7 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
 import Helmet from 'react-helmet';
-import ReadNext from '../components/ReadNext';
-import { rhythm } from 'utils/typography';
 import { config } from 'config';
-import Bio from 'components/Bio';
 
 import '../css/zenburn.css';
 
@@ -20,19 +17,12 @@ const MarkdownWrapper = ({ route }) => {
       <div dangerouslySetInnerHTML={{ __html: post.body }} />
       <em
         style={{
-          display: 'block',
-          marginBottom: rhythm(2)
+          display: 'block'
         }}
       >
         Posted {moment(post.date).format('MMMM D, YYYY')}
       </em>
-      <hr
-        style={{
-          marginBottom: rhythm(2)
-        }}
-      />
-      <ReadNext post={post} pages={route.pages} />
-      <Bio />
+      <hr/>
     </div>
   );
 };

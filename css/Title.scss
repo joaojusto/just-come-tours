@@ -1,0 +1,20 @@
+@import "Color";
+
+$Title-font-size: 20px;
+$Title-line-height: 30px;
+$Title-letter-spacing: 1px;
+$Title-font-family: 'Lato', sans-serif;
+
+.Title {
+  color: $Color-slate-green;
+
+  font-size: $Title-font-size;
+  line-height: $Title-line-height;
+  letter-spacing: $Title-letter-spacing;
+  font-family: $Title-font-family;
+  text-transform: uppercase;
+}
+
+.Title.Title--alternative {
+  color: $Color-pale-grey;
+}

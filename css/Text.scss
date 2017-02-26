@@ -1,0 +1,17 @@
+@import "Color";
+
+$Text-font-size: 20px;
+$Text-line-height: 30px;
+$Text-font-family: 'Roboto Slab', serif;
+
+.Text {
+  color: $Color-charcoal;
+
+  font-size: $Text-font-size;
+  line-height: $Text-line-height;
+  font-family: $Text-font-family;
+}
+
+.Text.Text--alternative {
+  color: $Color-pale-grey;
+}
