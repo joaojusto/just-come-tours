@@ -22,7 +22,7 @@ const HTML = ({ body }) => {
       {head.title.toComponent()}
       {head.meta.toComponent()}
       {css}
-      <link href="https://fonts.googleapis.com/css?family=Lato:900|Roboto+Slab" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato Black:900|Roboto+Slab" rel="stylesheet" />
     </head>
     <body>
       <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />

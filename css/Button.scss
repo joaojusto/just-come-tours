@@ -4,7 +4,7 @@
 $Button-font-size: 13px;
 $Button-line-height: 15px;
 $Button-letter-spacing: 0.5px;
-$Button-font-family: 'Lato', sans-serif;
+$Button-font-family: 'Lato Black', sans-serif;
 $Button-inner-border-width: 2px;
 
 .Button {
@@ -40,7 +40,7 @@ $Button-inner-border-width: 2px;
     width: calc(100% - #{$Button-inner-border-width * 4});
     height: calc(100% - #{$Button-inner-border-width * 4});
 
-    border: $Color-algae-green solid $Button-inner-border-width;
+    border: $Color-pale-grey solid $Button-inner-border-width;
   }
 }
 
@@ -48,4 +48,8 @@ $Button-inner-border-width: 2px;
   background-color: $Color-pale-grey;
 
   color: $Color-algae-green;
+
+  &::after {
+    border-color: $Color-algae-green;
+  }
 }
