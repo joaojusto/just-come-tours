@@ -1,0 +1,34 @@
+@import "Color";
+@import "Spacing";
+
+$Event-z-index-background: 1;
+$Event-z-index-foreground: 2;
+
+.Event {
+  padding: 0 $Spacing-xSmall;
+}
+
+.Event-description {
+  position: relative;
+
+  z-index: $Event-z-index-foreground;
+
+  padding: $Spacing-xSmall;
+
+  background-color: $Color-slate-green;
+}
+
+.Event-header {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Event-actions {
+  margin-top: $Spacing-xSmall;
+}
+
+.Event-image {
+  z-index: $Event-z-index-background;
+  transform: translate($Spacing-xSmall, -$Spacing-base);
+
+  margin-bottom: -$Spacing-base;
+}

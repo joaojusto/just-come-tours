@@ -1,15 +1,14 @@
 import React from 'react';
 
+import '../css/Index';
 import Hero from '../components/Hero';
-
-import '../css/Title';
-import '../css/Label';
-import '../css/Text';
-import '../css/Button';
+import Event from '../components/Event';
 
 const Index = () => (
   <div className="Index">
     <Hero />
+    <Event />
+    <span className="Index-sectionSpacer" />
   </div>
 );
 

@@ -5,7 +5,7 @@ $Hero-z-index-background: 1;
 $Hero-z-index-backgroundOverlay: 2;
 $Hero-z-index-foreground: 3;
 
-.Hero {
+.Hero {
   position: relative;
 
   width: 100%;
@@ -33,7 +33,9 @@ $Hero-z-index-foreground: 3;
 }
 
 .Hero-lightOverlay {
-  top: 50%;
+  bottom: 0;
+
+  height: 50%;
 
   background-image: linear-gradient(to bottom, $Color-pale-grey-0, $Color-pale-grey);
 }

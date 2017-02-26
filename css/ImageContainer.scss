@@ -1,0 +1,36 @@
+@import "Color";
+@import "Spacing";
+
+$Image-shadow-border-radious: 45px;
+$Image-shadow-blur-amount: 20px;
+
+$Image-z-index-background: 1;
+$Image-z-index-foreground: 2;
+
+.ImageContainer {
+  position: relative;
+}
+
+.ImageContainer-imageWrapper {
+  position: relative;
+
+  z-index: $Image-z-index-foreground;
+
+  overflow: hidden;
+}
+
+.ImageContainer-shadow {
+  position: absolute;
+
+  top: $Spacing-xSmall;
+  left: $Spacing-xSmall;
+  z-index: $Image-z-index-background;
+
+  width: calc(100% - #{$Spacing-xSmall});
+  height: 100%;
+
+  border-radius: $Image-shadow-border-radious;
+  filter: blur($Image-shadow-blur-amount);
+  -webkit-filter: blur($Image-shadow-blur-amount);
+  background-color: rgba(44, 60, 52, 0.2);
+}

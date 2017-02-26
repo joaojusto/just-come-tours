@@ -6,6 +6,8 @@ $Label-letter-spacing: 1px;
 $Label-font-family: 'Roboto Slab', serif;
 
 .Label {
+  display: block;
+
   color: $Color-pale-grey;
 
   font-size: $Label-font-size;

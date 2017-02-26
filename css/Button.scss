@@ -1,5 +1,51 @@
 @import "Color";
+@import "Spacing";
+
+$Button-font-size: 13px;
+$Button-line-height: 15px;
+$Button-letter-spacing: 0.5px;
+$Button-font-family: 'Lato', sans-serif;
+$Button-inner-border-width: 2px;
 
 .Button {
+  position: relative;
 
+  display: block;
+
+  padding: $Spacing-xSmall;
+
+  background-color: $Color-algae-green;
+
+  color: $Color-pale-grey;
+
+  font-size: $Button-font-size;
+  line-height: $Button-line-height;
+  letter-spacing: $Button-letter-spacing;
+  font-family: $Button-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: none;
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: calc(100% - #{$Button-inner-border-width * 4});
+    height: calc(100% - #{$Button-inner-border-width * 4});
+
+    border: $Color-algae-green solid $Button-inner-border-width;
+  }
+}
+
+.Button.Button--alternative {
+  background-color: $Color-pale-grey;
+
+  color: $Color-algae-green;
 }
