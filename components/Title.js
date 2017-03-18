@@ -9,7 +9,7 @@ const Title = ({ children, alternative }) => {
     'Title--alternative': alternative
   });
 
-  return <h1 className={className}>{children}</h1>;
+  return <h2 className={className}>{children}</h2>;
 };
 
 Title.propTypes = {

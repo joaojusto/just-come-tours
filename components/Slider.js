@@ -9,12 +9,30 @@ const settings = {
   dots: false,
   arrows: false,
   infinite: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  draggable: true,
   focusOnSelect: true,
-  initialSlide: 1
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        initialSlide: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        draggable: true,
+      }
+    },
+    {
+      breakpoint: 9999,
+      settings: {
+        initialSlide: 2,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        centerMode: true,
+        draggable: false,
+        focusOnSelect: false,
+      }
+    }
+  ]
 };
 
 const Slider = ({ children }) => (

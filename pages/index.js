@@ -14,9 +14,9 @@ const Index = () => (
     <Event />
     <span className="Index-sectionSpacer" />
     <TourismPrograms />
-    <span className="Index-sectionSpacer" />
+    <span className="Index-sectionSpacer desktop-hidden" />
     <CorporateTeamBuilding />
-    <span className="Index-sectionSpacer" />
+    <span className="Index-sectionSpacer desktop-hidden" />
     <GuidedThematicTours />
     <span className="Index-sectionSpacer" />
     <AdventuresExperiences /> </div>

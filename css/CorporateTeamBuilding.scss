@@ -1,11 +1,27 @@
 @import "Spacing";
+@import "Breakpoint";
 
 .CorporateTeamBuilding {
+  width: 100%;
+  max-width: 100%;
+}
+
+.CorporateTeamBuilding-content {
+  overflow: hidden;
+
   padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  }
 }
 
 .CorporateTeamBuilding-header {
   margin-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: calc(10 * #{$Spacing-xSmall});
+  };
 }
 
 .CorporateTeamBuilding-actions {
@@ -18,4 +34,9 @@
 
 .CorporateTeamBuilding-image {
   margin-right: -$Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-small;
+    margin-right: 0;
+  }
 }

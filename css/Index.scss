@@ -1,7 +1,18 @@
 @import "Spacing";
+@import "Breakpoint";
 
 .Index .Index-sectionSpacer {
   display: block;
 
   margin-bottom: $Spacing-large;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: calc(10 * #{$Spacing-xSmall});
+  };
+}
+
+.Index .Index-sectionSpacer.desktop-hidden {
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
 }

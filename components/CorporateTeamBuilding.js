@@ -5,24 +5,46 @@ import Text from './Text';
 import Title from './Title';
 import Button from './Button';
 import ImageContainer from './ImageContainer';
-import CorporateTeamBuildingImage from '../images/photo7.png';
+import CorporateTeamBuildingImage from '../images/photo7.jpg';
+import CorporateTeamBuildingImage2 from '../images/photo5.jpg';
+import CorporateTeamBuildingImage3 from '../images/photo6.jpg';
+import Grid, { GridColumn } from './Grid';
 
 const CorporateTeamBuilding = () => (
   <section className="CorporateTeamBuilding">
-    <div className="CorporateTeamBuilding-header">
-      <Title>CORPORATE & TEAM BUILDING</Title>
-    </div>
-    <Text>
-      Team building activities is an innovative formula to create relationship
-      bonds more profound between collaborators of the same company of
-      organization, in a way so the company achieves superior production levels,
-      more team performance and happiness on work.
-    </Text>
-    <div className="CorporateTeamBuilding-actions">
-      <Button>KNOW MORE</Button>
-    </div>
-    <div className="CorporateTeamBuilding-image">
-      <ImageContainer src={CorporateTeamBuildingImage} />
+    <div className="CorporateTeamBuilding-content">
+      <Grid>
+        <GridColumn size="5"/>
+        <GridColumn size="6" background left="-1">
+          <ImageContainer src={CorporateTeamBuildingImage2} />
+        </GridColumn>
+        <GridColumn size="6">
+          <GridColumn size="3">
+            <div className="CorporateTeamBuilding-header">
+              <Title>CORPORATE & TEAM BUILDING</Title>
+            </div>
+          </GridColumn>
+          <Text>
+            Team building activities is an innovative formula to create relationship
+            bonds more profound between collaborators of the same company of
+            organization, in a way so the company achieves superior production levels,
+            more team performance and happiness on work.
+          </Text>
+          <div className="CorporateTeamBuilding-actions">
+            <Button>KNOW MORE</Button>
+          </div>
+        </GridColumn>
+      </Grid>
+      <div className="CorporateTeamBuilding-image">
+        <Grid offset="1">
+          <GridColumn size="4">
+            <ImageContainer src={CorporateTeamBuildingImage} />
+          </GridColumn>
+          <GridColumn size="5">
+            <ImageContainer src={CorporateTeamBuildingImage3} />
+          </GridColumn>
+        </Grid>
+      </div>
     </div>
   </section>
 );

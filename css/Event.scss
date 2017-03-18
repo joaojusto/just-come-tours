@@ -1,11 +1,24 @@
 @import "Color";
 @import "Spacing";
+@import "Breakpoint";
 
 $Event-z-index-background: 1;
 $Event-z-index-foreground: 2;
 
 .Event {
+  width: 100%;
+  max-width: 100%;
+}
+
+.Event-content {
+  overflow: hidden;
+
   padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+    padding-bottom: calc(10 * #{$Spacing-xSmall});
+  }
 }
 
 .Event-description {
@@ -16,14 +29,28 @@ $Event-z-index-foreground: 2;
   padding: $Spacing-xSmall;
 
   background-color: $Color-slate-green;
+
+  @include Breakpoint-desktopOnly {
+    padding: $Spacing-small;
+
+    opacity: 0.9;
+  }
 }
 
 .Event-header {
   margin-bottom: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-small;
+  }
 }
 
 .Event-actions {
   margin-top: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-small;
+  }
 }
 
 .Event-image {
@@ -31,4 +58,10 @@ $Event-z-index-foreground: 2;
   transform: translate($Spacing-xSmall, -$Spacing-base);
 
   margin-bottom: -$Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    transform: none;
+
+    margin: calc(7 * #{$Spacing-xSmall}) 0 0 0;
+  };
 }

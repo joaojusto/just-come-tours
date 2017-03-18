@@ -6,11 +6,14 @@ import Label from './Label';
 import Button from './Button';
 import Slider from './Slider';
 
-import HistoryPhoto from '../images/photo12.png';
-import ShepardPhoto from '../images/photo13.png';
-import GastronomyPhoto from '../images/photo14.png';
+import HistoryPhoto from '../images/photo12.jpg';
+import ShepardPhoto from '../images/photo13.jpg';
+import GastronomyPhoto from '../images/photo14.jpg';
+import RaftingPhoto from '../images/photo11.jpg';
+import Grid, { GridColumn } from './Grid';
 
 const adventuresExperiences = [
+  { name: 'RAFTING', photo: RaftingPhoto },
   { name: 'HISTORY & CULTURE', photo: HistoryPhoto },
   { name: 'BE A SHEPPERD', photo: ShepardPhoto },
   { name: 'TRY THE GASTRONOMY', photo: GastronomyPhoto }
@@ -18,23 +21,30 @@ const adventuresExperiences = [
 
 const AdventuresExperiences = () => (
   <section className="AdventuresExperiences">
-    <div className="AdventuresExperiences-header">
-      <Title>ADVENTURES & EXPERIENCES</Title>
-    </div>
+    <Grid offset="3">
+      <GridColumn size="5">
+        <div className="AdventuresExperiences-header">
+          <Title>ADVENTURES & EXPERIENCES</Title>
+        </div>
+      </GridColumn>
+    </Grid>
 
-    <div className="AdventuresExperiences-list">
-      <Slider>
-        {adventuresExperiences.map(({ name, photo }) => (
-          <div className="AdventuresExperiences-item">
-            <img src={photo} className="AdventuresExperiences-itemImage" />
-            <div className="AdventuresExperiences-itemLabel">
-              <Label>{name}</Label>
+    <Grid>
+      <div className="AdventuresExperiences-list">
+        <Slider>
+          {adventuresExperiences.map(({ name, photo }, index) => (
+            <div className={`AdventuresExperiences-item position-${index + 1}`}>
+              <img src={photo} className="AdventuresExperiences-itemImage" />
+              <div className="AdventuresExperiences-itemLabel">
+                <Label>{name}</Label>
+              </div>
+              <div className="AdventuresExperiences-itemOverlay" />
             </div>
-            <div className="AdventuresExperiences-itemOverlay" />
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </div>
+    </Grid>
+
 
     <div className="AdventuresExperiences-actions">
       <Button alternative>SCHEDULE AN ADVENTURE</Button>

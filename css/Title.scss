@@ -1,19 +1,29 @@
 @import "Color";
+@import "Breakpoint";
 
-$Title-font-size: 20px;
-$Title-line-height: 30px;
-$Title-letter-spacing: 1px;
+$Title-font-size-mobile: 20px;
+$Title-font-size-desktop: 30px;
+$Title-line-height-mobile: 30px;
+$Title-line-height-desktop: 45px;
+$Title-letter-spacing-mobile: 1px;
+$Title-letter-spacing-desktop: 1.5px;
 $Title-font-family: 'Lato Black', sans-serif;
 
 .Title {
   color: $Color-slate-green;
 
-  font-size: $Title-font-size;
-  line-height: $Title-line-height;
-  letter-spacing: $Title-letter-spacing;
+  font-size: $Title-font-size-mobile;
+  line-height: $Title-line-height-mobile;
+  letter-spacing: $Title-letter-spacing-mobile;
   font-family: $Title-font-family;
   font-weight: bold;
   text-transform: uppercase;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Title-font-size-desktop;
+    line-height: $Title-line-height-desktop;
+    letter-spacing: $Title-letter-spacing-desktop;
+  };
 }
 
 .Title.Title--alternative {

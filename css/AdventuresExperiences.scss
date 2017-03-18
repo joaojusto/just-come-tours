@@ -1,12 +1,13 @@
 @import "Color";
 @import "Spacing";
+@import "Breakpoint";
 
 .AdventuresExperiences {
   position: relative;
 
   background:
     linear-gradient(to top, $Color-pale-grey-15, $Color-pale-grey),
-    url(../images/footer.png)
+    url(../images/footer.jpg)
   ;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,6 +16,10 @@
 
 .AdventuresExperiences-header {
   padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  };
 }
 
 .AdventuresExperiences-list {
@@ -35,6 +40,34 @@
   position: relative;
 
   padding: 0 $Spacing-xSmall / 2;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0 $Spacing-small / 2;
+  };
+}
+
+.AdventuresExperiences-item.position-2 {
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-base;
+  };
+}
+
+.AdventuresExperiences-item.position-3 {
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-base;
+  };
+}
+
+.AdventuresExperiences-item.position-3 {
+  @include Breakpoint-desktopOnly {
+    margin-top: calc(7 * #{$Spacing-xSmall});
+  };
+}
+
+.AdventuresExperiences-item.position-4 {
+  @include Breakpoint-desktopOnly {
+    margin-top: calc(5 * #{$Spacing-xSmall});
+  };
 }
 
 .AdventuresExperiences-itemImage {
@@ -54,6 +87,10 @@
   text-align: center;
 
   z-index: 3;
+
+  @include Breakpoint-desktopOnly {
+    width: calc(100% - #{$Spacing-small});
+  }
 }
 
 .AdventuresExperiences-itemOverlay {
@@ -68,4 +105,10 @@
   background-image: linear-gradient(to bottom, $Color-charcoal-0, $Color-charcoal);
 
   z-index: 2;
+
+  @include Breakpoint-desktopOnly {
+    left: $Spacing-small / 2;
+
+    width: calc(100% - #{$Spacing-small});
+  }
 }

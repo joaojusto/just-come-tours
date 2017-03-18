@@ -1,20 +1,27 @@
 @import "Color";
+@import "Breakpoint";
 
-$PlayButton-size: 30px;
-$PlayButton-inner-circle-size: 25px;
+$PlayButton-size-mobile: 30px;
+$PlayButton-size-desktop: 40px;
+$PlayButton-inner-circle-size-mobile: 25px;
+$PlayButton-inner-circle-size-desktop: 30px;
 
 .PlayButton {
   position: relative;
 
   display: block;
 
-  width: $PlayButton-size;
-  height: $PlayButton-size;
+  width: $PlayButton-size-mobile;
+  height: $PlayButton-size-mobile;
 
   background-color: $Color-pale-grey;
 
   border: none;
   border-radius: 50%;
+
+  transition: all 0.3s ease-in-out;
+
+  cursor: pointer;
 
   &::after {
     position: absolute;
@@ -26,10 +33,32 @@ $PlayButton-inner-circle-size: 25px;
 
     transform: translate(-50%, -50%);
 
-    width: $PlayButton-inner-circle-size;
-    height: $PlayButton-inner-circle-size;
+    width: $PlayButton-inner-circle-size-mobile;
+    height: $PlayButton-inner-circle-size-mobile;
 
     border: $Color-algae-green solid 1px;
     border-radius: 50%;
+
+    transition: all 0.3s ease-in-out;
   }
+
+  &:hover {
+    background-color: $Color-algae-green;
+
+    &::after {
+      border-color: $Color-pale-grey;
+    }
+  }
+
+  @include Breakpoint-desktopOnly {
+    width: $PlayButton-size-desktop;
+    height: $PlayButton-size-desktop;
+
+    &::after {
+      width: $PlayButton-inner-circle-size-desktop;
+      height: $PlayButton-inner-circle-size-desktop;
+
+      border-width: 2px;
+    }
+  };
 }

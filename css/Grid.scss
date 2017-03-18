@@ -1,0 +1,85 @@
+@import "Breakpoint";
+
+$Grid-max-width: 1230px;
+$Grid-number-of-columns: 12;
+$Grid-column-max-width: 75px;
+$Grid-gutter-size: 30px;
+
+@include Breakpoint-desktopOnly {
+  .Grid {
+    position: relative;
+
+    width: 100%;
+    max-width: $Grid-max-width;
+
+    margin: 0 auto;
+  }
+
+  .Grid-column,
+  .Grid-backgroundColumn {
+    display: inline-block;
+
+    width: 100%;
+    max-width: $Grid-column-max-width;
+
+    &:not(:last-child) {
+      margin-right: $Grid-gutter-size;
+    }
+  }
+
+  .Grid-backgroundColumn {
+    position: absolute;
+  }
+
+  .Grid.Grid--1ColumnOffset {
+    padding: 0 ($Grid-column-max-width + $Grid-gutter-size)
+  }
+
+  @for $i from 2 through $Grid-number-of-columns {
+    .Grid-#{$i}columns,
+    .Grid-#{$i}BackgroundColumns {
+      display: inline-block;
+
+      width: 100%;
+      max-width: calc(calc(#{$Grid-column-max-width} * #{$i}) +
+                 calc(#{$Grid-gutter-size} * calc(#{$i} - 1)));
+
+      vertical-align: top;
+
+      &:not(:last-child) {
+        margin-right: $Grid-gutter-size;
+      }
+    }
+
+    .Grid.Grid--#{$i}ColumnsOffset {
+      padding: 0 calc(calc(#{$Grid-column-max-width} * #{$i}) +
+                  calc(#{$Grid-gutter-size} * calc(#{$i} - 1)));
+    }
+
+    @for $s from -$Grid-number-of-columns through $Grid-number-of-columns {
+      .Grid-#{$i}BackgroundColumns.left-#{$s}Columns{
+        position: absolute;
+
+        top: 0;
+        left: calc(calc(#{$Grid-column-max-width} * #{$s}) +
+                   calc(#{$Grid-gutter-size} * #{$s}));
+
+        margin: 0;
+
+        z-index: 0;
+      }
+
+      .Grid-#{$i}BackgroundColumns.right-#{$s}Columns {
+        position: absolute;
+
+        top: 0;
+        right: calc(calc(#{$Grid-column-max-width} * #{$s}) +
+                   calc(#{$Grid-gutter-size} * #{$s}));
+
+       margin: 0;
+
+        z-index: 0;
+      }
+    }
+  }
+};

@@ -1,5 +1,6 @@
 @import "Color";
 @import "Spacing";
+@import "Breakpoint";
 
 $Hero-z-index-background: 1;
 $Hero-z-index-backgroundOverlay: 2;
@@ -12,8 +13,25 @@ $Hero-z-index-foreground: 3;
   height: 100%;
 }
 
-.Hero-background {
+.Hero-backgroundMobile,
+.Hero-backgroundDesktop {
+  width: 100%;
+
   z-index: $Hero-z-index-background;
+}
+
+.Hero-backgroundMobile {
+  @include Breakpoint-desktopOnly {
+    display: none;
+  };
+}
+
+.Hero-backgroundDesktop {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block
+  };
 }
 
 .Hero-darkOverlay,
@@ -51,6 +69,17 @@ $Hero-z-index-foreground: 3;
   padding: 0 $Spacing-xSmall;
 
   z-index: $Hero-z-index-foreground;
+
+  @include Breakpoint-desktopOnly {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0;
+  };
 }
 
 .Hero-actions {

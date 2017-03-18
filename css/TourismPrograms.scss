@@ -1,15 +1,28 @@
 @import "Spacing";
+@import "Breakpoint";
 
 .TourismPrograms {
+  width: 100%;
+  max-width: 100%;
+}
+
+.TourismPrograms-content {
+  overflow: hidden;
+
   padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+    padding-bottom: calc(17 * #{$Spacing-xSmall});
+  }
 }
 
 .TourismPrograms-header {
   margin-bottom: $Spacing-small;
-}
 
-.TourismPrograms-actions {
-  margin: $Spacing-small 0;
+  @include Breakpoint-desktopOnly {
+    margin-top: calc(5 * #{$Spacing-xSmall)});
+  };
 }
 
 .TourismPrograms-actions {
