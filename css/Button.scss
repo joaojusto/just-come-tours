@@ -27,6 +27,8 @@ $Button-inner-border-width: 2px;
 
   border: none;
 
+  transition: all 0.3s ease-in-out;
+
   &::after {
     position: absolute;
 
@@ -41,6 +43,17 @@ $Button-inner-border-width: 2px;
     height: calc(100% - #{$Button-inner-border-width * 4});
 
     border: $Color-pale-grey solid $Button-inner-border-width;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $Color-algae-green;
+    background-color: $Color-pale-grey;
+
+    &::after {
+      border-color: $Color-algae-green;
+    }
   }
 }
 
@@ -51,5 +64,15 @@ $Button-inner-border-width: 2px;
 
   &::after {
     border-color: $Color-algae-green;
+  }
+
+  &:hover {
+    background-color: $Color-algae-green;
+
+    color: $Color-pale-grey;
+
+    &::after {
+      border-color: $Color-pale-grey;
+    }
   }
 }
