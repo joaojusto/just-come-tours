@@ -22,7 +22,7 @@ const adventuresExperiences = [
 const AdventuresExperiences = () => (
   <section className="AdventuresExperiences">
     <Grid offset="3">
-      <GridColumn size="5">
+      <GridColumn size="7">
         <div className="AdventuresExperiences-header">
           <Title>ADVENTURES & EXPERIENCES</Title>
         </div>

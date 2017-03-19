@@ -29,7 +29,9 @@ const GuidedThematicTours = () => (
         </GridColumn>
 
         <GridColumn size="5" background right="-1">
-          <ImageContainer src={GuidedThematicToursImage3} />
+          <div className="GuidedThematicTours-desktopImage">
+            <ImageContainer src={GuidedThematicToursImage3} />
+          </div>
         </GridColumn>
       </Grid>
 
@@ -39,7 +41,9 @@ const GuidedThematicTours = () => (
             <Button>create your program</Button>
           </GridColumn>
           <GridColumn size="3">
-            <ImageContainer src={GuidedThematicToursImage} />
+            <div className="GuidedThematicTours-mobileImage">
+              <ImageContainer src={GuidedThematicToursImage} />
+            </div>
           </GridColumn>
           <GridColumn size="3">
             <div className="GuidedThematicTours-footerImage">

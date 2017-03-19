@@ -26,9 +26,22 @@
 }
 
 .TourismPrograms-actions {
-  margin: $Spacing-small 0;
+  margin: $Spacing-small 0 0 0;
 }
 
-.TourismPrograms-image {
+.TourismPrograms-mobileImage {
   margin-right: -$Spacing-xSmall;
+  margin-top: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin: 0;
+  };
+}
+
+.TourismPrograms-desktopImage {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block;
+  };
 }

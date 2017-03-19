@@ -29,7 +29,9 @@ const TourismPrograms = () => (
         </GridColumn>
 
         <GridColumn size="3">
-          <ImageContainer src={TourismProgramsImage2} />
+          <div className="TourismPrograms-desktopImage">
+            <ImageContainer src={TourismProgramsImage2} />
+          </div>
         </GridColumn>
       </Grid>
 
@@ -39,10 +41,14 @@ const TourismPrograms = () => (
             <Button>create your program</Button>
           </GridColumn>
           <GridColumn size="3">
-            <ImageContainer src={TourismProgramsImage} />
+            <div className="TourismPrograms-mobileImage">
+              <ImageContainer src={TourismProgramsImage} />
+            </div>
           </GridColumn>
           <GridColumn size="5" background right="-1">
-            <ImageContainer src={TourismProgramsImage3} />
+            <div className="TourismPrograms-desktopImage">
+              <ImageContainer src={TourismProgramsImage3} />
+            </div>
           </GridColumn>
         </Grid>
       </div>

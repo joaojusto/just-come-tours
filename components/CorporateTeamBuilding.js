@@ -16,7 +16,9 @@ const CorporateTeamBuilding = () => (
       <Grid>
         <GridColumn size="5"/>
         <GridColumn size="6" background left="-1">
-          <ImageContainer src={CorporateTeamBuildingImage2} />
+          <div className="CorporateTeamBuilding-desktopImage">
+            <ImageContainer src={CorporateTeamBuildingImage2} />
+          </div>
         </GridColumn>
         <GridColumn size="6">
           <GridColumn size="3">
@@ -35,13 +37,15 @@ const CorporateTeamBuilding = () => (
           </div>
         </GridColumn>
       </Grid>
-      <div className="CorporateTeamBuilding-image">
+      <div className="CorporateTeamBuilding-images">
         <Grid offset="1">
           <GridColumn size="4">
             <ImageContainer src={CorporateTeamBuildingImage} />
           </GridColumn>
           <GridColumn size="5">
-            <ImageContainer src={CorporateTeamBuildingImage3} />
+            <div className="CorporateTeamBuilding-desktopImage">
+              <ImageContainer src={CorporateTeamBuildingImage3} />
+            </div>
           </GridColumn>
         </Grid>
       </div>

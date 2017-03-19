@@ -32,11 +32,19 @@
   margin: $Spacing-small 0;
 }
 
-.CorporateTeamBuilding-image {
+.CorporateTeamBuilding-images {
   margin-right: -$Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
     margin-top: $Spacing-small;
     margin-right: 0;
   }
+}
+
+.CorporateTeamBuilding-desktopImage {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block;
+  };
 }

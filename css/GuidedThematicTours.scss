@@ -25,7 +25,7 @@
 }
 
 .GuidedThematicTours-actions {
-  margin: $Spacing-small 0;
+  margin: $Spacing-small 0 0 0;
 }
 
 .GuidedThematicTours-actions {
@@ -41,7 +41,28 @@
 }
 
 .GuidedThematicTours-footerImage {
+  display: none;
+
   @include Breakpoint-desktopOnly {
+    display: block;
+
     margin-top: $Spacing-large;
+  };
+}
+
+.GuidedThematicTours-desktopImage {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block;
+  };
+}
+
+.GuidedThematicTours-mobileImage {
+  margin-top: $Spacing-small;
+  margin-right: -$Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin: 0;
   };
 }
