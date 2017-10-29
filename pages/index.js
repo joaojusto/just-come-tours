@@ -11,15 +11,7 @@ import AdventuresExperiences from '../components/AdventuresExperiences';
 const Index = () => (
   <div className="Index">
     <Hero />
-    <Event />
-    <span className="Index-sectionSpacer" />
-    <TourismPrograms />
-    <span className="Index-sectionSpacer desktop-hidden" />
-    <CorporateTeamBuilding />
-    <span className="Index-sectionSpacer desktop-hidden" />
-    <GuidedThematicTours />
-    <span className="Index-sectionSpacer" />
-    <AdventuresExperiences /> </div>
+  </div>
 );
 
 export default Index;

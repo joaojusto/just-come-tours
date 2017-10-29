@@ -1,5 +1,5 @@
-@import "Color";
-@import "Breakpoint";
+@import 'Color';
+@import 'Breakpoint';
 
 $PlayButton-size-mobile: 30px;
 $PlayButton-size-desktop: 40px;
@@ -26,7 +26,7 @@ $PlayButton-inner-circle-size-desktop: 30px;
   &::after {
     position: absolute;
 
-    content: "";
+    content: '';
 
     top: 50%;
     left: 50%;
@@ -48,6 +48,10 @@ $PlayButton-inner-circle-size-desktop: 30px;
     &::after {
       border-color: $Color-pale-grey;
     }
+
+    .PlayButton-icon {
+      border-left: 15px solid $Color-pale-grey;
+    }
   }
 
   @include Breakpoint-desktopOnly {
@@ -60,5 +64,23 @@ $PlayButton-inner-circle-size-desktop: 30px;
 
       border-width: 2px;
     }
-  };
+  }
+}
+
+.PlayButton-icon {
+  position: absolute;
+
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+
+  width: 0;
+  height: 0;
+
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-left: 15px solid $Color-algae-green;
+
+  transition: all 0.3s ease-in-out;
 }

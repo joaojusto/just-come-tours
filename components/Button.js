@@ -3,21 +3,24 @@ import classNames from 'classnames';
 
 import '../css/Button';
 
-const Button = ({ children, onClick, alternative }) => {
+const Button = ({ to, children, onClick, alternative }) => {
   const className = classNames({
-    'Button': true,
+    Button: true,
     'Button--alternative': alternative
   });
 
-  return <button onClick={onClick} className={className}>
-    {children}
-  </button>;
+  return (
+    <a onClick={onClick} className={className} href={to}>
+      {children}
+    </a>
+  );
 };
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  alternative: PropTypes.bool
+  alternative: PropTypes.bool,
+  to: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -25,4 +28,3 @@ Button.defaultProps = {
 };
 
 export default Button;
-  

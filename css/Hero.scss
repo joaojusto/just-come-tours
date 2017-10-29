@@ -1,6 +1,6 @@
-@import "Color";
-@import "Spacing";
-@import "Breakpoint";
+@import 'Color';
+@import 'Spacing';
+@import 'Breakpoint';
 
 $Hero-z-index-background: 1;
 $Hero-z-index-backgroundOverlay: 2;
@@ -11,27 +11,23 @@ $Hero-z-index-foreground: 3;
 
   width: 100%;
   height: 100%;
+  max-height: 100vh;
+
+  overflow: hidden;
 }
 
-.Hero-backgroundMobile,
-.Hero-backgroundDesktop {
-  width: 100%;
+.Hero-background {
+  position: relative;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  min-width: 100vh;
+  min-height: 100vh;
 
   z-index: $Hero-z-index-background;
-}
-
-.Hero-backgroundMobile {
-  @include Breakpoint-desktopOnly {
-    display: none;
-  };
-}
-
-.Hero-backgroundDesktop {
-  display: none;
-
-  @include Breakpoint-desktopOnly {
-    display: block
-  };
 }
 
 .Hero-darkOverlay,
@@ -47,7 +43,11 @@ $Hero-z-index-foreground: 3;
 .Hero-darkOverlay {
   top: 0;
 
-  background-image: linear-gradient(to bottom, $Color-black-60, $Color-black-20);
+  background-image: linear-gradient(
+    to bottom,
+    $Color-black-60,
+    $Color-black-20
+  );
 }
 
 .Hero-lightOverlay {
@@ -55,7 +55,11 @@ $Hero-z-index-foreground: 3;
 
   height: 50%;
 
-  background-image: linear-gradient(to bottom, $Color-pale-grey-0, $Color-pale-grey);
+  background-image: linear-gradient(
+    to bottom,
+    $Color-pale-grey-0,
+    $Color-pale-grey
+  );
 }
 
 .Hero-content {
@@ -79,9 +83,14 @@ $Hero-z-index-foreground: 3;
     width: 100%;
 
     padding: 0;
-  };
+  }
 }
 
 .Hero-actions {
   margin-top: $Spacing-small;
+}
+
+.Hero-logo {
+  width: 500px;
+  height: auto;
 }

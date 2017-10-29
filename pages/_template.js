@@ -6,27 +6,27 @@ import { prefixLink } from 'gatsby-helpers';
 import '../css/Reset';
 import '../css/Layout';
 
-
 const homeLink = location => {
-  if (location.pathname === prefixLink('/'))
-    return null;
+  if (location.pathname === prefixLink('/')) return null;
 
-  return <h1><Link to={prefixLink('/')}>{config.blogTitle}</Link></h1>;
+  return (
+    <h1>
+      <Link to={prefixLink('/')}>{config.blogTitle}</Link>
+    </h1>
+  );
 };
 
 const Template = ({ location, children }) => {
   const header = homeLink(location);
 
-  return <div className="Layout">
-    <div className="Layout-content">
-      {header}
-      {children}
+  return (
+    <div className="Layout">
+      <div className="Layout-content">
+        {header}
+        {children}
+      </div>
     </div>
-
-    <footer className="Layout-footer">
-      
-    </footer>
-  </div>;
+  );
 };
 
 Template.propTypes = {
