@@ -5,28 +5,17 @@ import Text from './Text';
 import Logo from './Logo';
 import Button from './Button';
 import PageTitle from './PageTitle';
-import VideoBackground from '../videos/video.mp4';
 import HeroBackgroundMobile from '../images/hero-mobile.jpg';
 import HeroBackgroundDesktop from '../images/hero@2x.jpg';
 
-const video = className => (
-  <video
-    loop
-    muted
-    autoPlay
-    playsInline
-    preload="auto"
-    type="video/mp4"
-    ref={video => video.play}
-    className={className}
-  >
-    <source src={VideoBackground} />
-  </video>
-);
-
 const Hero = () => (
   <section className="Hero">
-    {video('Hero-background')}
+    <iframe className="Hero-background"
+      volume="0"
+      frameborder="0"
+      allowfullscreen
+      src="https://www.youtube.com/embed/1F23QJ_U2MI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1">
+    </iframe>
     <div className="Hero-darkOverlay" />
     <div className="Hero-lightOverlay" />
     <div className="Hero-content">
@@ -37,7 +26,8 @@ const Hero = () => (
       </Text>
 
       <div className="Hero-actions">
-        <Button to="mailto:webmaster@example.com">Contact</Button>
+        <Button to="mailto:info@justcome.pt">Contact</Button>
+        <Button alternative to="tel:+351918460295">Call Us</Button>
       </div>
     </div>
   </section>

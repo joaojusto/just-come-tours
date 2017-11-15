@@ -1,5 +1,6 @@
 @import 'Color';
 @import 'Spacing';
+@import 'Breakpoint';
 
 $Button-font-size: 13px;
 $Button-line-height: 15px;
@@ -79,4 +80,8 @@ $Button-inner-border-width: 2px;
       border-color: $Color-pale-grey;
     }
   }
+}
+
+.Button + .Button {
+  margin-top: $Spacing-xSmall;
 }
